@@ -7,7 +7,7 @@ class Lzo < Formula
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
     cellar :any
-    revision 1
+    revision 100
     sha1 "a0898f7d631ef265a1816ad82482240ae30f9f39" => :tiger_g4e
   end
 
