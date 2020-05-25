@@ -58,7 +58,7 @@ def split_formula(fpath):
     after_lines = lines[end_lineno+1:]
     return (before_lines, bottle_do_lines, after_lines)
 
-def insert_bottle(bottle_do_lines, sha1, os_arch):
+def insert_bottle(bottle_do_lines, sha1, os_arch, root_url):
     """Inserts an entry into a 'bottle do' clause."""
     content_lines = bottle_do_lines[1:-1]
     # figure out the indentation level
@@ -68,14 +68,22 @@ def insert_bottle(bottle_do_lines, sha1, os_arch):
     else:
         indent = indent_regex.match(content_lines[0]).groups(1)[0]
     new_content_lines = []
+    new_content_lines.append(indent + 'root_url "%s"\n' % root_url)
     for line in content_lines:
         words = line.split()
+
+        # filter out any existing bottle entry for matching our os_arch.
         if len(words) >= 3 \
         and words[2] == '=>' \
         and words[3].startswith(':') \
         and words[3] == ":%s" % os_arch:
             # this is an older entry for this os_arch, so drop it.
             continue
+
+        # filter out any root_url lines.
+        if len(words) >= 1 and words[0] == 'root_url':
+            continue
+
         new_content_lines.append(line)
     new_bottle_line = indent + 'sha1 "%s" => :%s\n' % (sha1, os_arch)
     new_content_lines.append(new_bottle_line)
@@ -91,7 +99,7 @@ if __name__ == '__main__':
     root_url = sys.argv[4]
 
     before_lines, bottle_do_lines, after_lines = split_formula(formula_fpath)
-    bottle_do_lines = insert_bottle(bottle_do_lines, sha1, os_arch)
+    bottle_do_lines = insert_bottle(bottle_do_lines, sha1, os_arch, root_url)
 
     fd = open(formula_fpath, 'w')
     for line in before_lines + bottle_do_lines + after_lines:
