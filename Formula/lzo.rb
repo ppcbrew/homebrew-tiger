@@ -9,7 +9,7 @@ class Lzo < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     cellar :any
     sha1 "a0898f7d631ef265a1816ad82482240ae30f9f39" => :tiger_g4e
-    sha1 "10ba16988ed42546f96fe4cfbeb4ef86cbdc451d" => :leopard_g5
+    sha1 "18185912cd8f668243a37c8f7865de608afe38df" => :leopard_g5
   end
 
   def install
