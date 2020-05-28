@@ -13,7 +13,7 @@ class Autoconf < Formula
   end
 
   # Tiger's m4 is too old.
-  depends_on "m4" if MacOS.version == :tiger
+  depends_on "ppcbrew/tiger/m4" if MacOS.version == :tiger
 
   keg_only :provided_until_xcode43
 

@@ -12,7 +12,7 @@ class Automake < Formula
     sha1 "465d5d391aaac29f48c6ace503b06723d3269536" => :leopard_g5
   end
 
-  depends_on "autoconf" => :run
+  depends_on "ppcbrew/tiger/autoconf" => :run
 
   keg_only :provided_until_xcode43
 
