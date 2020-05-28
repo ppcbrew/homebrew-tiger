@@ -1,0 +1,12 @@
+#!/usr/bin/python
+
+# ppcbrew: call brew and prefix the last argument with 'ppcbrew/tiger/'.
+
+import sys
+import os
+
+args = ['/usr/local/bin/brew'] + sys.argv[1:]
+if not args[-1].startswith('-'):
+    args[-1] = "ppcbrew/tiger/%s" % args[-1]
+sys.stdout.write("Exec'ing %s\n" % ' '.join(args))
+os.execv(args[0], args)
