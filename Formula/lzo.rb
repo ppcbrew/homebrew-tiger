@@ -10,6 +10,7 @@ class Lzo < Formula
     cellar :any
     sha1 "487d75311ac77d0292dccce970189818af484689" => :leopard_g5
     sha1 "bf8e39f23416b654dff977434298a5ba530c3ab0" => :tiger_g4e
+    sha1 "9afcb83e0d8fb19e9e8c0def333fed115ddfea38" => :tiger_g3
   end
 
   def install
