@@ -11,9 +11,7 @@ class Libtool < Formula
 
   bottle do
     cellar :any
-    sha256 "9e483f1712bc2a917f9183f80d3536f2e778dfbe9c89b82d7538354791b704e9" => :tiger_altivec
-    sha256 "312ee20c1208b8de8cb545513015460d68dff99aafed509999dc8d9826b92217" => :leopard_g3
-    sha256 "f14f7c9f863be4c820839eb403e5a994986f8c4d2d19ff60ea011adcceb2ed81" => :leopard_altivec
+    root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "d95e4f404be21f5ae5f3d7b2dd0d79e4664837dc" => :leopard_g5
   end
 

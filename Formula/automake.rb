@@ -8,11 +8,7 @@ class Automake < Formula
 
   bottle do
     cellar :any
-    revision 2
-    sha256 "70a763221d2bb9baaf630f2170224c915ca96a9966fbb1d86781c8743740bb7b" => :el_capitan
-    sha256 "d8e4773130e25ff576a0c7d18b4d010b1e03eba90b0074e1ac749fdf3bc13e26" => :yosemite
-    sha256 "69c1635672fa682a40949572e64fe3495055e97ad2c105dd46fb2e447d0d65a8" => :mavericks
-    sha256 "6e6fdaa7fb7ddaaeb103341d1ca351e0669874f86eb21eb6623cb345dd1f5b6f" => :mountain_lion
+    root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "465d5d391aaac29f48c6ace503b06723d3269536" => :leopard_g5
   end
 

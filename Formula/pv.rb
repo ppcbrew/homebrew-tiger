@@ -7,11 +7,7 @@ class Pv < Formula
 
   bottle do
     cellar :any_skip_relocation
-    revision 1
-    sha256 "630d2923a804c7a442f6466adf5d6aa21f5f1602f6b005760199a85c14758adc" => :el_capitan
-    sha256 "82d8e9279d977a9591450142bf90015df62f800df026038a170d7db6d20a198a" => :yosemite
-    sha256 "48c70bdab7cffbc780d15c1d903ae1b7dd80552ed7762e8168629dc1df920fce" => :mavericks
-    sha256 "1b48570302d9357be80e10a3dfd0362863ced93c111cc827c7fab7b2e79dae9e" => :mountain_lion
+    root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "808916d1f2ceb0adb6001d0033fe8a6b3adcca24" => :leopard_g5
   end
 

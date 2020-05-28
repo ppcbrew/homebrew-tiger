@@ -7,9 +7,7 @@ class Lzop < Formula
 
   bottle do
     cellar :any
-    sha256 "8948b68bd5f6ca91371dfbd3522c60015f1010e389ff138e12460bec3ade52b6" => :yosemite
-    sha256 "dd86655bbf09a2d39c2b357fd8d19daec04516ed6d9d471e5d7031aed1a64d0d" => :mavericks
-    sha256 "0fe2af0dba0474808f9f4979e4db3cd2c1be4df1f2237c75a9a323283c894280" => :mountain_lion
+    root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "8c6e99632e4edf599d9e7564a2a5806c504dcba6" => :tiger_g4e
   end
 
