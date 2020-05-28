@@ -9,6 +9,7 @@ class M4 < Formula
   bottle do
     cellar :any_skip_relocation
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "d1196ac3f0481f0b38ac592ab0a534263840f8df" => :tiger_g4e
   end
 
   keg_only :provided_by_osx
