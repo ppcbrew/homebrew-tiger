@@ -1,4 +1,5 @@
 class Lzo < Formula
+  revision 100
   desc "Real-time data compression library"
   homepage "http://www.oberhumer.com/opensource/lzo/"
   url "http://www.oberhumer.com/opensource/lzo/download/lzo-2.09.tar.gz"
@@ -7,8 +8,8 @@ class Lzo < Formula
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
     cellar :any
-    revision 1
     sha1 "a0898f7d631ef265a1816ad82482240ae30f9f39" => :tiger_g4e
+    sha1 "487d75311ac77d0292dccce970189818af484689" => :leopard_g5
   end
 
   def install

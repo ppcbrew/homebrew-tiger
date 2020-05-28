@@ -1,10 +1,10 @@
 #!/usr/bin/python
 
+# upload-bottle-to-b2.py: upload a bottle to Backblaze's B2 service.
+
 # Copyright (c) 2020 Jason Pepas
 # Released under the terms of the MIT License.
 # See https://opensource.org/licenses/MIT
-
-# This script uploads a file to Backblaze's B2 object storage service.
 
 # This script is written for the Python interpreter which shipped
 # with OS X Tiger (10.4), which is Python 2.3.5.
