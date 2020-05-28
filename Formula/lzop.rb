@@ -9,6 +9,7 @@ class Lzop < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "8c6e99632e4edf599d9e7564a2a5806c504dcba6" => :tiger_g4e
+    sha1 "ff427a1ef5e442bf34a2da0ff0bd66daec7751e5" => :tiger_g3
   end
 
   depends_on "ppcbrew/tiger/lzo"
