@@ -28,6 +28,7 @@ class Gcc < Formula
 
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "8bae51f1b6e9f3003d1d4cf642668645bb1c891b" => :leopard_g5
   end
 
   option "with-nls", "Build with native language support (localization)"
