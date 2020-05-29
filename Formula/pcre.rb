@@ -9,6 +9,7 @@ class Pcre < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "f822356418f90587b059f72f7be430aa6016f300" => :tiger_g4e
   end
 
   head do
