@@ -10,9 +10,9 @@ class HtopOsx < Formula
     sha1 "55e7abbdbe3fdd6ae87a9d76bef744d97e35e9df" => :leopard_g5
   end
 
-  depends_on "autoconf" => :build
-  depends_on "automake" => :build
-  depends_on "libtool" => :build
+  depends_on "ppcbrew/tiger/autoconf" => :build
+  depends_on "ppcbrew/tiger/automake" => :build
+  depends_on "ppcbrew/tiger/libtool" => :build
 
   # Tiger does not have backtrace nor the 64-bits compatible kernel APIs
   patch :DATA if MacOS.version < :leopard
