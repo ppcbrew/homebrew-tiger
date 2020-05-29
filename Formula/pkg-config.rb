@@ -8,6 +8,7 @@ class PkgConfig < Formula
 
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "1388e7ebb38e567b1fed17fc60f81a0b0f574367" => :tiger_g4e
   end
 
   def install
