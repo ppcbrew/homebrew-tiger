@@ -9,6 +9,7 @@ class Openssl < Formula
 
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "084786d86d1e3c5a640e5add1500fdf6e1a1351b" => :tiger_g4e
   end
 
   option :universal
