@@ -10,6 +10,7 @@ class Gmp < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "2fe808acfbac4ac3bd16b17efa54f39ca3a8fc64" => :leopard_g5
+    sha1 "fe3e85e0f46f05adf9728c1905380be59cfe15b3" => :tiger_g4e
   end
 
   option "32-bit"
