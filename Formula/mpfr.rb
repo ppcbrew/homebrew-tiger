@@ -14,7 +14,7 @@ class Mpfr < Formula
 
   option "32-bit"
 
-  depends_on "gmp"
+  depends_on "ppcbrew/tiger/gmp"
 
   fails_with :clang do
     build 421
