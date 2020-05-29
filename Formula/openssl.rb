@@ -11,6 +11,7 @@ class Openssl < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "4e10a202665b83ef22f3a9f6e4c8cad79ec661ff" => :leopard_g5
     sha1 "084786d86d1e3c5a640e5add1500fdf6e1a1351b" => :tiger_g4e
+    sha1 "b51901da38b5ea7349b2e3beef755211ff7defa2" => :tiger_g3
   end
 
   option :universal
