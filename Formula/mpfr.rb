@@ -11,6 +11,7 @@ class Mpfr < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "f41e9713f0e17825489089c780448a20fbebdc7e" => :leopard_g5
     sha1 "c4da2628bbb3cff6dc9449875a22b26e477106ff" => :tiger_g4e
+    sha1 "4c8cd711ba13659788a8983ac59f912b5a8e46b3" => :tiger_g3
   end
 
   option "32-bit"
