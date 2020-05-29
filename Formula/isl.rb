@@ -16,6 +16,7 @@ class Isl < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "2add5c6af49b005e659dea2a2355c46ce3aff3c2" => :leopard_g5
+    sha1 "54f60c99a043132f72561d52239bff27d1d5eb6b" => :tiger_g4e
   end
 
   head do
