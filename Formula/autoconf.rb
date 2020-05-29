@@ -10,6 +10,7 @@ class Autoconf < Formula
     cellar :any_skip_relocation
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "fc75a2a472bf482c3377e0eada0c00a33a7a018a" => :leopard_g5
+    sha1 "33132bfb75fa73915ada07383e168a4d84bc41a3" => :tiger_g4e
   end
 
   # Tiger's m4 is too old.
