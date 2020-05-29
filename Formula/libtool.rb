@@ -15,7 +15,7 @@ class Libtool < Formula
     sha1 "d95e4f404be21f5ae5f3d7b2dd0d79e4664837dc" => :leopard_g5
   end
 
-  depends_on "m4" if MacOS.version < :leopard
+  depends_on "ppcbrew/tiger/m4" if MacOS.version < :leopard
 
   keg_only :provided_until_xcode43
 
