@@ -26,7 +26,9 @@ class Perl < Formula
       "-Dman3dir=#{man3}",
       "-Duseshrplib",
       "-Duselargefiles",
-      "-Dusethreads"
+      "-Dusethreads",
+      "-Dcc='#{ENV.cc}'",
+      "-Doptimize='-Os'"
     ]
 
     args << "-Dusedtrace" if build.with? "dtrace"
