@@ -8,6 +8,7 @@ class Lzop < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "94f89f47047a1a1b3ba7f26d6b973f22596e6ca6" => :leopard_g5
     sha1 "8c6e99632e4edf599d9e7564a2a5806c504dcba6" => :tiger_g4e
     sha1 "ff427a1ef5e442bf34a2da0ff0bd66daec7751e5" => :tiger_g3
   end
