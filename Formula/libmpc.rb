@@ -9,6 +9,7 @@ class Libmpc < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
+    sha1 "5142a88e1fcca662827abb425e08987776a39fdd" => :leopard_g5
   end
 
   depends_on "ppcbrew/tiger/gmp"
