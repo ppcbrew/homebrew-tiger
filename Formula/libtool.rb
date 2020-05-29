@@ -13,6 +13,7 @@ class Libtool < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "d95e4f404be21f5ae5f3d7b2dd0d79e4664837dc" => :leopard_g5
+    sha1 "e23550af243175795247e4c3b9f2ca7fa0a0664f" => :tiger_g4e
   end
 
   depends_on "ppcbrew/tiger/m4" if MacOS.version < :leopard
