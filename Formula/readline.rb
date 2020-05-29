@@ -10,6 +10,7 @@ class Readline < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha1 "f65c844e385ea168c6b11d3c4a5658776ab16229" => :tiger_g4e
+    sha1 "6b2285d4514ddf7ad4aa0936be8a45580bf53a73" => :tiger_g3
   end
 
   keg_only :shadowed_by_osx, <<-EOS.undent
