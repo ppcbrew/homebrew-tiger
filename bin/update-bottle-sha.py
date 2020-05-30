@@ -68,7 +68,7 @@ def load_config():
     for line in lines:
         key, value = line.split(' ', 1)
         if key in ['tap_name', 'os_arch']:
-            config[key] = value
+            config[key] = value.rstrip()
         continue
     return config
 
@@ -98,7 +98,7 @@ def split_formula(lines):
             continue
     while i < len(lines):
         line = lines[i]
-        postable.append(line)
+        postamble.append(line)
         i += 1
         continue
     if len(bottle_clause) == 0:
@@ -124,7 +124,7 @@ def determine_parameters():
     os_arch = config['os_arch']
     tap_fpath = "/usr/local/Library/Taps/%s/homebrew-%s" \
         % (tap_name.split('/')[0], tap_name.split('/')[1])
-    formula_fpath = "%s/%s.rb" % (tap_fpath, formula_name)
+    formula_fpath = "%s/Formula/%s.rb" % (tap_fpath, formula_name)
     return (formula_fpath, hash, os_arch)
 
 def update_sha_line(bottle_clause, hash, os_arch):
@@ -134,9 +134,10 @@ def update_sha_line(bottle_clause, hash, os_arch):
         """Return the leading whitespace portion of this line."""
         i = 0
         while i < len(line):
-            if not ch.isspace():
+            if not line[i].isspace():
                 break
             else:
+                i += 1
                 continue
         return line[:i]
 
@@ -189,8 +190,8 @@ def update_sha_line(bottle_clause, hash, os_arch):
 def main():
     (formula_fpath, hash, os_arch) = determine_parameters()
     formula_lines = load_lines(formula_fpath)
-    (preamble, bottle_clause, post_amble) = split_formula(formula_lines)
-    bottle_clause2 = update_sha_line(bottle_clause)
+    (preamble, bottle_clause, postamble) = split_formula(formula_lines)
+    bottle_clause2 = update_sha_line(bottle_clause, hash, os_arch)
     write_lines(formula_fpath, preamble + bottle_clause2 + postamble)
 
 if __name__ == '__main__':
