@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# add-bottle-to-formula.py: insert a bottle sha1 line into a formula.
+# add-bottle-to-formula.py: insert a bottle sha line into a formula.
 
 # Copyright (c) 2020 Jason Pepas
 # Released under the terms of the MIT license.
@@ -19,7 +19,7 @@ def usage(fd):
     """Print the usage message to the file descriptor."""
     fd.write('Usage:\n')
     exe = os.path.basename(sys.argv[0])
-    fd.write("  %s <formula file> <sha1> <os/arch> <root url>\n" % exe)
+    fd.write("  %s <formula file> <sha> <os/arch> <root url>\n" % exe)
     fd.write('\n')
     fd.write('For example:\n')
     fd.write(
@@ -58,7 +58,7 @@ def split_formula(fpath):
     after_lines = lines[end_lineno+1:]
     return (before_lines, bottle_do_lines, after_lines)
 
-def insert_bottle(bottle_do_lines, sha1, os_arch, root_url):
+def insert_bottle(bottle_do_lines, sha, os_arch, root_url):
     """Inserts an entry into a 'bottle do' clause."""
     content_lines = bottle_do_lines[1:-1]
     # figure out the indentation level
@@ -85,7 +85,14 @@ def insert_bottle(bottle_do_lines, sha1, os_arch, root_url):
             continue
 
         new_content_lines.append(line)
-    new_bottle_line = indent + 'sha1 "%s" => :%s\n' % (sha1, os_arch)
+    if len(sha) == 64:
+        sha_type = 'sha256'
+    elif len(sha) == 40:
+        sha_type = 'sha1'
+    else:
+        sys.stderr.write("Error: don't know what type of sha this is.\n")
+        sys.exit(1)
+    new_bottle_line = indent + '%s "%s" => :%s\n' % (sha_type, sha, os_arch)
     new_content_lines.append(new_bottle_line)
     return [bottle_do_lines[0]] + new_content_lines + [bottle_do_lines[-1]]
 
@@ -94,12 +101,12 @@ if __name__ == '__main__':
         usage(sys.stderr)
         sys.exit(1)
     formula_fpath = sys.argv[1]
-    sha1 = sys.argv[2]
+    sha = sys.argv[2]
     os_arch = sys.argv[3]
     root_url = sys.argv[4]
 
     before_lines, bottle_do_lines, after_lines = split_formula(formula_fpath)
-    bottle_do_lines = insert_bottle(bottle_do_lines, sha1, os_arch, root_url)
+    bottle_do_lines = insert_bottle(bottle_do_lines, sha, os_arch, root_url)
 
     fd = open(formula_fpath, 'w')
     for line in before_lines + bottle_do_lines + after_lines:
