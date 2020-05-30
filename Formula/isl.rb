@@ -17,7 +17,7 @@ class Isl < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "add1db8b2596927050f0ef061df5c9a501a47f94b6113dc360295ac6b7838111" => :leopard_g5
     sha256 "fc716bf9078612a7211df0100dc2b0df2a6e2ce5c72fb61ebea9cc33b76c09f1" => :tiger_g4e
-    sha1 "uploadd9ff6ee915e9fae7d94b1e0d8ba65f05ead2b168" => :tiger_g3
+    sha256 "fe8a42dc3254c58f8c54f01f83a4bb785c82b5dacea336a1c1a9c9466b04bd93" => :tiger_g3
   end
 
   head do

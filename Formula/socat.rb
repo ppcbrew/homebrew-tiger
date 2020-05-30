@@ -10,7 +10,7 @@ class Socat < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "3abc1c0a7db0fad00dc5d62db267dcb8e31b520c2bca9669ec9e2416b740028d" => :leopard_g5
     sha256 "03d94e9a300bc01ae9acc25f9249f081f67ea8bf7d4cf0ff4026fd5a3b9ac00b" => :tiger_g4e
-    sha1 "28b7ad650d05284b7cbfb3c92d58acec0dc555c1" => :tiger_g3
+    sha256 "edede92c8412ec7931a889fcf3975a5c966138bd7a5407d403535b81b13ceb18" => :tiger_g3
   end
 
   devel do

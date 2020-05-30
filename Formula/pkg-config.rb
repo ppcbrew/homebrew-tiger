@@ -10,7 +10,7 @@ class PkgConfig < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "b977271fb6dc00bdcbdb9130040c47bf65c3291da453313c1027caebfd52c452" => :leopard_g5
     sha256 "2ac7c880f64d54c238c3bd3f84981883a0536e7e3df842102cfa49d58ba14705" => :tiger_g4e
-    sha1 "ab830d707a34dbad3f54db91656988c85b587f43" => :tiger_g3
+    sha256 "8b0640de392b661a8efd16675f68f6d06430209ffd308783418616681fc738dd" => :tiger_g3
   end
 
   def install

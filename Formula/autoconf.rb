@@ -11,7 +11,7 @@ class Autoconf < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "7deac3f9d35824390fa39b4cf44492aebb8a3e1e56c8b57f035b0ab8c2ba700d" => :leopard_g5
     sha256 "0997895326ee5539f7bbe5e051072a2f8e8ea8f7ee52ef43b7b56bb6ec560e66" => :tiger_g4e
-    sha1 "df5b222b44056aca218538809d50fc8e2cc5da90" => :tiger_g3
+    sha256 "db48bb50432cb22ce5cda7348e4f7a9ecce367f94e30cac554be52e802454978" => :tiger_g3
   end
 
   # Tiger's m4 is too old.

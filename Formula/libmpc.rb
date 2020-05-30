@@ -11,7 +11,7 @@ class Libmpc < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "0cc4757372357ac5de72ca2ab5be6a90341d49b75583dd64b07f4323134603e9" => :leopard_g5
     sha256 "834df635538e3f05377ecba190df5461a216ed9c396b25eba848489322614a38" => :tiger_g4e
-    sha1 "2743e39c0f33d52aa2c7d98a0297481d1d2744a4" => :tiger_g3
+    sha256 "bcfe21d422eba6f116819666c2566c3ce70af64ef42292ce30d928ca5a8d9062" => :tiger_g3
   end
 
   depends_on "ppcbrew/tiger/gmp"

@@ -11,7 +11,7 @@ class Readline < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "d849ff912cae7bf891c366655fdb783709b21e70c717a72a1cbd339a3dd0e714" => :leopard_g5
     sha256 "c38df8c205aa9661cbb5ad1af1f31f62ed73ffe7b79217d94f9557c835d834b6" => :tiger_g4e
-    sha1 "6b2285d4514ddf7ad4aa0936be8a45580bf53a73" => :tiger_g3
+    sha256 "b76ee3e56e03fa03c3c34b87f76e3e5fe3d63ed0e5f75e130102c76e59877104" => :tiger_g3
   end
 
   keg_only :shadowed_by_osx, <<-EOS.undent

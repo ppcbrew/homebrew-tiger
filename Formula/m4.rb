@@ -11,7 +11,7 @@ class M4 < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "46abd4ae29480940e3008300cbc37ce302c8ed2800427cf493ceaf1f9bcb87ed" => :leopard_g5
     sha256 "905cd12ed4b8dce39e2401c1a48d964f27f4634a53273fe859b3efd6eab33370" => :tiger_g4e
-    sha1 "a694728ed73d613e386d4fd031cdcb699925dd13" => :tiger_g3
+    sha256 "60764b4ff82933551614848d0df432f8fadde8e88405bbe12a50c2c74357773e" => :tiger_g3
   end
 
   keg_only :provided_by_osx

@@ -11,7 +11,7 @@ class Gmp < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "ad9ea080afefa54849dce39fdf7c25373a76ab7acde9babe10f1d0694849b354" => :leopard_g5
     sha256 "c7f91607d795f49b1c73420ef0eb8407997457fea3319e9f3a31a39220287bb8" => :tiger_g4e
-    sha1 "02eda88a6d15e67eeafb2e2f43bdfaaa4ce88eb3" => :tiger_g3
+    sha256 "44e47262201253d11bc312717a48c0d38126e07b45c9ca8da35d1596fe2d1e48" => :tiger_g3
   end
 
   option "32-bit"

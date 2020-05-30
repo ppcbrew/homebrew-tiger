@@ -30,7 +30,7 @@ class Gcc < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "7b2ce21822bda5d2d29be55fa8503c38c0a2e35f2e19e90b06ab1edeed8f2297" => :leopard_g5
     sha256 "eb0f045be90ea587498c47c22de3f21042b5aee00f01f0a51dc111931783e011" => :tiger_g4e
-    sha1 "5800b3688cee132443703c8d873f2f9418cf0e6c" => :tiger_g3
+    sha256 "8b1f5a4c26567fd461fe09dba814ecbacab9248612b3847376a84282142377d8" => :tiger_g3
   end
 
   option "with-nls", "Build with native language support (localization)"

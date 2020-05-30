@@ -11,7 +11,7 @@ class Automake < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "da93c14f1acef5b3360100800e525e8f2cc8f9ef598a0a370350a0223681b4b4" => :leopard_g5
     sha256 "a5773c870c8b03849aae049f54b65403dbbc3e71913cd96be555a9abc66201da" => :tiger_g4e
-    sha1 "5b2218fdcbaf652c28360f0c3b8dd8c48e218450" => :tiger_g3
+    sha256 "3686873011c254740d2d8aae21bc712ac6c95d63715d338a6a09c47cd2a14395" => :tiger_g3
   end
 
   depends_on "ppcbrew/tiger/autoconf" => :run

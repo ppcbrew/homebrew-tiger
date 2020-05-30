@@ -10,7 +10,7 @@ class Makedepend < Formula
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "0759ba0e7cd86f108d775789611ec20c9fa115167cfd202f2650bd307a935f69" => :leopard_g5
     sha256 "d8eb1e9f79964b169848070e151217dc85f7c6224c6de2da59c48a573a964b61" => :tiger_g4e
-    sha1 "d0686c523946d1abb2e39e44b41f98ceb2a5e7dd" => :tiger_g3
+    sha256 "df0e59baf6264772874b24552d9efc628e97d6e6903fb1baa281ee835f7c557d" => :tiger_g3
   end
 
   depends_on "ppcbrew/tiger/pkg-config" => :build
