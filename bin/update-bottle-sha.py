@@ -156,7 +156,7 @@ def update_sha_line(bottle_clause, hash, os_arch):
 
     def insert_sha_line(bottle_clause, sha_line):
         """Add the sha line to the end of the bottle clause (just before 'end')."""
-        bottle_clause2 = bottle_clause[:-1] + [sha_line] + bottle_clause[-1]
+        bottle_clause2 = bottle_clause[:-1] + [sha_line] + bottle_clause[-1:]
         return bottle_clause2
 
     def replace_sha_line(bottle_clause, sha_line, os_arch):
