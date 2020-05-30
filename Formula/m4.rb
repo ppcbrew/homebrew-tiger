@@ -10,7 +10,7 @@ class M4 < Formula
     cellar :any_skip_relocation
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "46abd4ae29480940e3008300cbc37ce302c8ed2800427cf493ceaf1f9bcb87ed" => :leopard_g5
-    sha1 "d1196ac3f0481f0b38ac592ab0a534263840f8df" => :tiger_g4e
+    sha256 "905cd12ed4b8dce39e2401c1a48d964f27f4634a53273fe859b3efd6eab33370" => :tiger_g4e
     sha1 "a694728ed73d613e386d4fd031cdcb699925dd13" => :tiger_g3
   end
 

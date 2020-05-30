@@ -29,7 +29,7 @@ class Gcc < Formula
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "7b2ce21822bda5d2d29be55fa8503c38c0a2e35f2e19e90b06ab1edeed8f2297" => :leopard_g5
-    sha1 "5fef9f5aad8349049937a85bd3ccb38cc276af3a" => :tiger_g4e
+    sha256 "eb0f045be90ea587498c47c22de3f21042b5aee00f01f0a51dc111931783e011" => :tiger_g4e
     sha1 "5800b3688cee132443703c8d873f2f9418cf0e6c" => :tiger_g3
   end
 

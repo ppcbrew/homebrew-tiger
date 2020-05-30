@@ -15,7 +15,7 @@ class Bash < Formula
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "af19f5561ac8f16d201eebdd271e28b39bebb4463a7313734e99ad28d2ac2655" => :leopard_g5
-    sha1 "063919cb4e04c78753f2c3a2db3ab1b3de9860d8" => :tiger_g4e
+    sha256 "c746155fa55f40ecff6b39fc20b9e162b57224ba6151e3eadc617c54f0c16a8d" => :tiger_g4e
   end
 
   depends_on "ppcbrew/tiger/readline"
