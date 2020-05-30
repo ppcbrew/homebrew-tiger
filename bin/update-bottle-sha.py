@@ -111,6 +111,9 @@ def split_formula(lines):
 
 def determine_parameters():
     """Determine our parameters using config and cmd-line args."""
+    if len(sys.argv) == 2 and sys.argv[1] in ['-h', '--help']:
+        usage(sys.stdout)
+        sys.exit(0)
     if len(sys.argv) < 3:
         usage(sys.stderr)
         sys.exit(1)
