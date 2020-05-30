@@ -8,7 +8,7 @@ class Pv < Formula
   bottle do
     cellar :any_skip_relocation
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "808916d1f2ceb0adb6001d0033fe8a6b3adcca24" => :leopard_g5
+    sha256 "aae5bb02b17ca3865ffeedd5069dfc235703dd5dd85ce2c0bf5db6b086a80936" => :leopard_g5
     sha1 "b0f41a36478f6a8ca948cd312f54a9a1a7d2c898" => :tiger_g4e
     sha1 "5f6fda9fe996b5ad5efcbe2098771c3807616407" => :tiger_g3
   end

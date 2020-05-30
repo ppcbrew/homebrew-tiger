@@ -14,7 +14,7 @@ class Bash < Formula
 
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "fc0ea5766daf0ffebf443eec0237879d7d7488de" => :leopard_g5
+    sha256 "af19f5561ac8f16d201eebdd271e28b39bebb4463a7313734e99ad28d2ac2655" => :leopard_g5
     sha1 "063919cb4e04c78753f2c3a2db3ab1b3de9860d8" => :tiger_g4e
   end
 

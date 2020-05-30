@@ -8,7 +8,7 @@ class Makedepend < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "687a062e21f480ffd97e252e6177269e0bc4a33d" => :leopard_g5
+    sha256 "0759ba0e7cd86f108d775789611ec20c9fa115167cfd202f2650bd307a935f69" => :leopard_g5
     sha1 "dfb69127ab3d954be1ed1f4de90f61ef4d674e4b" => :tiger_g4e
     sha1 "d0686c523946d1abb2e39e44b41f98ceb2a5e7dd" => :tiger_g3
   end

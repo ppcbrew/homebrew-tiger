@@ -8,7 +8,7 @@ class Socat < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "858f045d84e33742997b66398b091782552bc6bd" => :leopard_g5
+    sha256 "3abc1c0a7db0fad00dc5d62db267dcb8e31b520c2bca9669ec9e2416b740028d" => :leopard_g5
     sha1 "ac04da217085f012bb695aac49e00ee7fcf5fd5d" => :tiger_g4e
     sha1 "28b7ad650d05284b7cbfb3c92d58acec0dc555c1" => :tiger_g3
   end

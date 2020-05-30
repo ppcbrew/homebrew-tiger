@@ -7,7 +7,7 @@ class HtopOsx < Formula
 
   bottle do
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "55e7abbdbe3fdd6ae87a9d76bef744d97e35e9df" => :leopard_g5
+    sha256 "f60fb6cbcb5300358401aaca086db7269d0cc292e4c787e80d3529c7e00ebe68" => :leopard_g5
   end
 
   depends_on "ppcbrew/tiger/autoconf" => :build

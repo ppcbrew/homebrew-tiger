@@ -9,7 +9,7 @@ class Automake < Formula
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha1 "465d5d391aaac29f48c6ace503b06723d3269536" => :leopard_g5
+    sha256 "da93c14f1acef5b3360100800e525e8f2cc8f9ef598a0a370350a0223681b4b4" => :leopard_g5
     sha1 "f22c4e0c3be2cd2c115211b51c1915a61bb2e669" => :tiger_g4e
     sha1 "5b2218fdcbaf652c28360f0c3b8dd8c48e218450" => :tiger_g3
   end
