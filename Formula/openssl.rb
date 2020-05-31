@@ -76,6 +76,7 @@ class Openssl < Formula
 
       ENV.deparallelize
       system "perl", "./Configure", *(configure_args + arch_args[arch])
+      inreplace "Makefile", "-O3", "-Os"
       system "make", "depend"
       system "make"
       system "make", "test" if build.with?("test")
