@@ -8,7 +8,7 @@ class Python2 < Formula
 
   bottle do
     sha256 "9dcb4d33bbc805d4d57a5db2f7458fc48be2a17eddf8fcbba34f06dc9d3eb0de" => :leopard_g5
-    sha256 "821c76a41d0f75ae1cf1bc6e59bbd55797b69521051c41328423c77a4331f171" => :tiger_g4e
+    sha256 "9afa22e935cf265b9020eb379e2432a67d5b3058ea140fd287378483e780c43f" => :tiger_g4e
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
