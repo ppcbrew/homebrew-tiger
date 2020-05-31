@@ -14,20 +14,20 @@ pre-built [bottles](https://docs.brew.sh/Bottles).
 If you would like to use this tap:
 
 ```
-$ brew tap ppcbrew/tiger
+brew tap ppcbrew/tiger
 ```
 
 Then, to install a package:
 
 ```
-$ brew update
-$ brew install ppcbrew/tiger/gcc
+brew update
+brew install ppcbrew/tiger/gcc
 ```
 
 Or, use the `ppcbrew` script, which wraps brew and automatically prefixes the formula with the tap name.
 
 ```
-$ ppcbrew install gcc
+ppcbrew install gcc
 ```
 
 The `ppcbrew` script and other scripts are available in the
