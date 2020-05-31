@@ -10,6 +10,7 @@ class Gdbm < Formula
     cellar :any
     sha256 "8811cf101480658cd34ffd5c8fac00663de32345a623d11702b7a0ae2696a83d" => :leopard_g5
     sha256 "b8922d9fe603a5e421a72ecf5177095622968fbe4e2b6905f15e8af01bde9fb4" => :tiger_g4e
+    sha256 "47fae80bc0752a2cce09251090ff5eb7c72e5d6e210dc6a6b93573c2d7e1e58c" => :tiger_g3
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
