@@ -153,6 +153,13 @@ class Python2 < Formula
     args << "LDFLAGS=#{ldflags.join(" ")}" unless ldflags.empty?
     args << "CPPFLAGS=#{cppflags.join(" ")}" unless cppflags.empty?
 
+    inreplace "configure" do |s|
+      # Python's configure seems to place user CFLAGS before its own,
+      # but the last -O flag is the one which gets used,
+      # so we need to edit configure.
+      s.gsub! "-O3 -Wall", "-Os -Wall"
+    end
+
     system "./configure", *args
     system "make"
 
