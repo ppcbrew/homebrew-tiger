@@ -2,7 +2,7 @@
 
 This is a [tap](https://docs.brew.sh/Taps)
 for the [tigerbrew](https://github.com/mistydemeo/tigerbrew) project,
-a fork of [homebrew](https://brew.sh/)
+which is a fork of [homebrew](https://brew.sh/)
 for [PowerPC](https://en.wikipedia.org/wiki/PowerPC)
 [Macs](https://en.wikipedia.org/wiki/Macintosh)
 running OS X [Tiger](https://en.wikipedia.org/wiki/Mac_OS_X_Tiger) (10.4)
@@ -30,7 +30,8 @@ Or, use the `ppcbrew` script, which wraps brew and automatically prefixes the fo
 $ ppcbrew install gcc
 ```
 
-The `ppcbrew` script and other scripts are available in the [bin]() directory of this repo.
+The `ppcbrew` script and other scripts are available in the
+[bin](https://github.com/ppcbrew/homebrew-tiger/tree/master/bin) directory of this repo.
 Symlink them into your $PATH (e.g. `~/bin`):
 
 ```
