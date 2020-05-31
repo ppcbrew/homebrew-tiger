@@ -10,6 +10,7 @@ class Mpfr < Formula
     cellar :any
     sha256 "65901ced271e74c99a35945cfbad92ff94f29877c085dd5fb137cfcf05626619" => :leopard_g5
     sha256 "485a0e6300223a1342157df896496121647126296076c2e1cb33d3f6ef3e566e" => :tiger_g3
+    sha256 "3242b524d81b8fdc890677b7662e24ba154d743024be94d1a5ad4a446d84491b" => :tiger_g4e
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
