@@ -24,7 +24,7 @@ class Pcre < Formula
 
   def install
     args = %W[
-      CFLAGS=#{RbConfig::CONFIG["CFLAGS"]}
+      CFLAGS=-Os
       ./configure
       --disable-dependency-tracking
       --prefix=#{prefix}
@@ -36,7 +36,10 @@ class Pcre < Formula
       --enable-pcregrep-libz
       --enable-pcregrep-libbz2
     ]
-    args << "--enable-jit" if MacOS.version >= :sierra
+    #args << "--enable-jit" if MacOS.version >= :sierra
+    # Previously, jit was broken on ppc.  It seems to pass the tests now,
+    # but I'll err on the conservative side as I haven't tested thoroughly.
+    args << "--disable-jit"
 
     system "./autogen.sh" if build.head?
     system "env", *args
