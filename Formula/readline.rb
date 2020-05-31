@@ -23,6 +23,7 @@ class Readline < Formula
   bottle do
     cellar :any
     sha256 "bf4926a7da97e41e87eafed4c89793b2ba3d5d02fd66e9eea58c7240b629f7c9" => :tiger_g3
+    sha256 "95b9ba6e9b8325b3002a246c0bf236a69f0a97fa8e913ffdb584b9376795f3b2" => :tiger_g4e
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
