@@ -7,7 +7,7 @@ class Python2 < Formula
   head "https://github.com/python/cpython.git", :branch => "2.7"
 
   bottle do
-    sha256 "52e6e29f5c4d9115cbbb7f33e5afed6f51845e921210a71c3883d2d7fa55774b" => :leopard_g5
+    sha256 "9dcb4d33bbc805d4d57a5db2f7458fc48be2a17eddf8fcbba34f06dc9d3eb0de" => :leopard_g5
     sha256 "821c76a41d0f75ae1cf1bc6e59bbd55797b69521051c41328423c77a4331f171" => :tiger_g4e
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
