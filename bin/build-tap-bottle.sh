@@ -71,14 +71,16 @@ cd $bottles_path
 ppcbrew bottle $formula
 
 # upload the bottle
-sha=$( sha256.rb $bottle )
 bottle=$( ls -1tr | tail -n1 )
-version=$( ppcbrew info $formula | grep stable | grep '(bottled)' | head -n1 | cut -d' ' -f3 )
 upload-bottle-to-b2.py $bottle
 
 # add a bottle sha to the formula
+sha=$( sha256.rb $bottle )
 cd ${tap_path}/Formula
 update-bottle-sha.py $formula $sha
+
+# commit and push the updated formula
 git add ${formula}.rb
+version=$( ppcbrew info $formula | grep stable | grep '(bottled)' | head -n1 | cut -d' ' -f3 )
 git commit -m "adding $os_arch bottle of $formula $version"
 git push origin
