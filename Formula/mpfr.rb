@@ -2,16 +2,13 @@ class Mpfr < Formula
   revision 100
   desc "C library for multiple-precision floating-point computations"
   homepage "http://www.mpfr.org/"
-  url "https://ftp.gnu.org/gnu/mpfr/mpfr-3.1.6.tar.xz"
-  mirror "https://ftpmirror.gnu.org/mpfr/mpfr-3.1.6.tar.xz"
-  sha256 "7a62ac1a04408614fccdc506e4844b10cf0ad2c2b1677097f8f35d3a1344a950"
+  url "https://ftp.gnu.org/gnu/mpfr/mpfr-4.0.2.tar.xz"
+  mirror "https://ftpmirror.gnu.org/mpfr/mpfr-4.0.2.tar.xz"
+  sha256 "1d3be708604eae0e42d578ba93b390c2a145f17743a744d8f3f8c2ad5855a38a"
 
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha256 "373df94d524c50c7b4fa15200f8991a43f729d1ffd4f76f2c449fd898f974497" => :leopard_g5
-    sha256 "3930e34ae3c6e41e2fdf3fad9ee3bd1030efd6f0c4461713676ae0dc4c7c328c" => :tiger_g4e
-    sha256 "58a6bd0ce24dca634e0ec658dfd15f07c7d94c07ff74a8d36b768e2c980a6453" => :tiger_g3
   end
 
   option "32-bit"
@@ -28,6 +25,10 @@ class Mpfr < Formula
 
   def install
     ENV.m32 if build.build_32_bit?
+    # Work around macOS Catalina / Xcode 11 code generation bug
+    # (test failure t-toom53, due to wrong code in mpn/toom53_mul.o)
+    ENV.append_to_cflags "-fno-stack-check"
+
     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}",
                           "--disable-silent-rules"
     system "make"
@@ -37,18 +38,24 @@ class Mpfr < Formula
 
   test do
     (testpath/"test.c").write <<-EOS.undent
-      #include <gmp.h>
       #include <mpfr.h>
+      #include <math.h>
+      #include <stdlib.h>
 
-      int main()
-      {
-        mpfr_t x;
-        mpfr_init(x);
-        mpfr_clear(x);
+      int main() {
+        mpfr_t x, y;
+        mpfr_inits2 (256, x, y, NULL);
+        mpfr_set_ui (x, 2, MPFR_RNDN);
+        mpfr_root (y, x, 2, MPFR_RNDN);
+        mpfr_pow_si (x, y, 4, MPFR_RNDN);
+        mpfr_add_si (y, x, -4, MPFR_RNDN);
+        mpfr_abs (y, y, MPFR_RNDN);
+        if (fabs(mpfr_get_d (y, MPFR_RNDN)) > 1.e-30) abort();
         return 0;
       }
     EOS
-    system ENV.cc, "test.c", "-lgmp", "-lmpfr", "-o", "test"
+    system ENV.cc, "test.c", "-L#{lib}", "-L#{Formula["gmp"].opt_lib}",
+                   "-lgmp", "-lmpfr", "-o", "test"
     system "./test"
   end
 end
