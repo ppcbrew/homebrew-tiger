@@ -7,6 +7,7 @@ class Libmpc < Formula
 
   bottle do
     cellar :any
+    sha256 "1fb4f675e2af85e2a982a4c8a9616efd7e0648dce61c57d5b3b02d6102f1625e" => :leopard_g5
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
