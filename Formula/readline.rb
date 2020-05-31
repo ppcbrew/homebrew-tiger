@@ -2,16 +2,27 @@ class Readline < Formula
   revision 100
   desc "Library for command-line editing"
   homepage "https://tiswww.case.edu/php/chet/readline/rltop.html"
-  url "https://ftpmirror.gnu.org/readline/readline-7.0.tar.gz"
-  mirror "https://ftp.gnu.org/gnu/readline/readline-7.0.tar.gz"
-  sha256 "750d437185286f40a369e1e4f4764eda932b9459b5ec9a731628393dd3d32334"
+  url "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz"
+  mirror "https://ftpmirror.gnu.org/readline/readline-8.0.tar.gz"
+  version "8.0.4"
+  sha256 "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461"
+
+  %w[
+    001 d8e5e98933cf5756f862243c0601cb69d3667bb33f2c7b751fe4e40b2c3fd069
+    002 36b0febff1e560091ae7476026921f31b6d1dd4c918dcb7b741aa2dad1aec8f7
+    003 94ddb2210b71eb5389c7756865d60e343666dfb722c85892f8226b26bb3eeaef
+    004 b1aa3d2a40eee2dea9708229740742e649c32bb8db13535ea78f8ac15377394c
+  ].each_slice(2) do |p, checksum|
+    patch :p0 do
+      url "https://ftp.gnu.org/gnu/readline/readline-8.0-patches/readline80-#{p}"
+      mirror "https://ftpmirror.gnu.org/readline/readline-8.0-patches/readline80-#{p}"
+      sha256 checksum
+    end
+  end
 
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha256 "d849ff912cae7bf891c366655fdb783709b21e70c717a72a1cbd339a3dd0e714" => :leopard_g5
-    sha256 "c38df8c205aa9661cbb5ad1af1f31f62ed73ffe7b79217d94f9557c835d834b6" => :tiger_g4e
-    sha256 "b76ee3e56e03fa03c3c34b87f76e3e5fe3d63ed0e5f75e130102c76e59877104" => :tiger_g3
   end
 
   keg_only :shadowed_by_osx, <<-EOS.undent
@@ -21,8 +32,11 @@ class Readline < Formula
   EOS
 
   def install
-    ENV.universal_binary
     system "./configure", "--prefix=#{prefix}", "--enable-multibyte"
+    # There is no termcap.pc in the base system, so we have to comment out
+    # the corresponding Requires.private line.
+    # Otherwise, pkg-config will consider the readline module unusable.
+    inreplace "readline.pc", /^(Requires.private: .*)$/, "# \\1"
     system "make", "install"
   end
 
