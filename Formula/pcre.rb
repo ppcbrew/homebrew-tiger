@@ -9,6 +9,7 @@ class Pcre < Formula
   bottle do
     cellar :any
     sha256 "e32e9ff692220a2a65ccf91e031bcc43764867eb442f0a370c6d70ef2cb79331" => :leopard_g5
+    sha256 "e32d2aa256ce702c0063644c3020b96a1769ab8b183080a97f379ba2a41f868a" => :tiger_g4e
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
