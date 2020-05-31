@@ -77,6 +77,7 @@ upload-bottle-to-b2.py $bottle
 # add a bottle sha to the formula
 sha=$( sha256.rb $bottle )
 cd ${tap_path}/Formula
+git pull
 update-bottle-sha.py $formula $sha
 
 # commit and push the updated formula
