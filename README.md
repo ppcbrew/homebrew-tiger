@@ -1,4 +1,4 @@
-# homebrew-tiger
+# ppcbrew/homebrew-tiger, a tap for tigerbrew
 
 This is a [tap](https://docs.brew.sh/Taps)
 for the [tigerbrew](https://github.com/mistydemeo/tigerbrew) project,
@@ -10,6 +10,8 @@ or [Leopard](https://en.wikipedia.org/wiki/Mac_OS_X_Leopard) (10.5).
 
 I use this tap to host [my](https://jason.pepas.com)
 pre-built [bottles](https://docs.brew.sh/Bottles).
+
+## Using this tap
 
 If you would like to use this tap:
 
@@ -64,3 +66,24 @@ gdbm
 
 If you would like to see bottles built for additional OS/arch combos,
 I will happily accept a build machine hardware donation! :)
+
+
+## Merging these formula upstream (to tigerbrew)
+
+Pulling these updated formulae back into tigerbrew will require undoing the tap-specific modifications which I perform:
+- I add `revision 100` to each formula to avoid naming naming conflicts
+- I prefix all dependencies with my tap name
+- I add bottle shas for the bottles I build
+- I add a `root_url` for my bottles
+
+Something like this should (mostly) do it:
+
+```
+sed -i.bak '/revision 100/d' foo.rb
+sed -i.bak 's?ppcbrew/tiger??g' foo.rb
+sed -i.bak '/sha.*=> :tiger_g3/d' foo.rb
+sed -i.bak '/sha.*=> :tiger_g4e/d' foo.rb
+sed -i.bak '/sha.*=> :tiger_g5/d' foo.rb
+sed -i.bak '/root_url/d' foo.rb
+rm foo.rb.bak
+```
