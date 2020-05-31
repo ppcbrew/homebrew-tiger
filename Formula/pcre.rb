@@ -24,8 +24,6 @@ class Pcre < Formula
 
   def install
     args = %W[
-      CFLAGS=-Os
-      ./configure
       --disable-dependency-tracking
       --prefix=#{prefix}
       --enable-utf8
@@ -42,7 +40,7 @@ class Pcre < Formula
     args << "--disable-jit"
 
     system "./autogen.sh" if build.head?
-    system "env", *args
+    system "./configure", *args
     system "make"
     ENV.deparallelize
     system "make", "test"
