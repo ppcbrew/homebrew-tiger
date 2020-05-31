@@ -2,16 +2,13 @@ class Gmp < Formula
   revision 100
   desc "GNU multiple precision arithmetic library"
   homepage "https://gmplib.org/"
-  url "https://gmplib.org/download/gmp/gmp-6.1.2.tar.xz"
-  mirror "https://ftp.gnu.org/gnu/gmp/gmp-6.1.2.tar.xz"
-  sha256 "87b565e89a9a684fe4ebeeddb8399dce2599f9c9049854ca8c0dfbdea0e21912"
+  url "https://gmplib.org/download/gmp/gmp-6.2.0.tar.xz"
+  mirror "https://ftp.gnu.org/gnu/gmp/gmp-6.2.0.tar.xz"
+  sha256 "258e6cd51b3fbdfc185c716d55f82c08aff57df0c6fbd143cf6ed561267a1526"
 
   bottle do
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
-    sha256 "ad9ea080afefa54849dce39fdf7c25373a76ab7acde9babe10f1d0694849b354" => :leopard_g5
-    sha256 "c7f91607d795f49b1c73420ef0eb8407997457fea3319e9f3a31a39220287bb8" => :tiger_g4e
-    sha256 "44e47262201253d11bc312717a48c0d38126e07b45c9ca8da35d1596fe2d1e48" => :tiger_g3
   end
 
   option "32-bit"
