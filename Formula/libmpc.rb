@@ -9,6 +9,7 @@ class Libmpc < Formula
     cellar :any
     sha256 "1fb4f675e2af85e2a982a4c8a9616efd7e0648dce61c57d5b3b02d6102f1625e" => :leopard_g5
     sha256 "fc03bd41274dda152c5e8ab79d3716d740821c7874493bb28b1400a192ce18f2" => :tiger_g4e
+    sha256 "a3fe27788dcf358b368d5e1ca704697978d72be7d3275ec96057579837b8e563" => :tiger_g3
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
