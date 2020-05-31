@@ -13,6 +13,7 @@ class Libtool < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "72db135cfc5d6b01fc800d7ead57627cc449f9f902a5a6a33c424ee4de623567" => :leopard_g5
+    sha256 "3ef3dc19be0cabbf61e6d7ea5128b01f5556720b119e9ebb4ad98edf3e6233b9" => :tiger_g3
     sha256 "288b98d2879792fdac085cdde081e6c6fb230196a9fc7836b33f856e091dfe7f" => :tiger_g4e
   end
 
