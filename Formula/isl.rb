@@ -16,6 +16,7 @@ class Isl < Formula
     cellar :any
     sha256 "083ad48b8160497de656d935212c5672de64c72b839208a4003ed2c93d52f8c3" => :leopard_g5
     sha256 "56df7fe63e13616e8824ee5f90fb54dc6927fda7492dd6dde0509de0e6b7f1d6" => :tiger_g4e
+    sha256 "a5c87fe41f8cc1b0d5e383dede7c90fcc145acb2b36fd511ba0491046fde31ce" => :tiger_g3
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
