@@ -6,7 +6,25 @@ import sys
 import os
 
 args = ['/usr/local/bin/brew'] + sys.argv[1:]
+
+# assume the last arg is a formula if it doesn't start with '-',
+# and prepend our tap name.
 if not args[-1].startswith('-'):
     args[-1] = "ppcbrew/tiger/%s" % args[-1]
+
+# if this is an install call with no '--env' specified, default
+# to specifying '--env=std'.
+if 'install' in args:
+    if len([arg for arg in args if arg.startswith('--env=')]) == 0:
+        i = 0
+        while i < len(args):
+            if args[i] == 'install':
+                i += 1
+                break
+            else:
+                i += 1
+                continue
+        args.insert(i, '--env=std')
+    
 sys.stdout.write("Exec'ing %s\n" % ' '.join(args))
 os.execv(args[0], args)
