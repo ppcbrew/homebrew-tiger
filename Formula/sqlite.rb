@@ -10,6 +10,7 @@ class Sqlite < Formula
     cellar :any
     root_url "https://f002.backblazeb2.com/file/bottles"
     sha256 "16ccdad06ab52cddf6ff2b8fc6d2d43788322821edaff256d2ade0eef366d36d" => :tiger_g4e
+    sha256 "bd7abef3cac0479e7a1ae44a9d43c34ddca1cb9b4f65b6348dee5da5fee1d477" => :tiger_g3
     sha256 "7c81c569c0d044d5a938fa3c034e7512e4bec628c577a6a598391f6eeb686a9d" => :leopard_g5
   end
 
