@@ -8,6 +8,7 @@ class Gmp < Formula
 
   bottle do
     cellar :any
+    sha256 "315533367273e762e3195c49f7ae1f1354555518df590593770f8caf80d02067" => :leopard_g5
     root_url "https://f002.backblazeb2.com/file/bottles"
   end
 
