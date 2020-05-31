@@ -90,10 +90,10 @@ class Python2 < Formula
     # with Python 2.7 built with clang 3.x or 4.x"
     # https://bugs.python.org/issue32616
     # https://github.com/Homebrew/homebrew-core/issues/22743
-    if DevelopmentTools.clang_build_version >= 802 &&
-       DevelopmentTools.clang_build_version < 902
-      args << "--without-computed-gotos"
-    end
+    #if DevelopmentTools.clang_build_version >= 802 &&
+    #   DevelopmentTools.clang_build_version < 902
+    #  args << "--without-computed-gotos"
+    #end
 
     args << "--without-gcc" if ENV.compiler == :clang
 
