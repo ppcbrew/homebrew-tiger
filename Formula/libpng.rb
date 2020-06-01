@@ -9,6 +9,7 @@ class Libpng < Formula
 
   bottle do
     sha256 "457c1307f46cbbf39ba898951ff40f651f0967914a066e69745992e5700faa1e" => :leopard_g5
+    sha256 "365d3a1debfef5acd91c2a19eb16659ffc9a10ff400165a2188cc452de13de6c" => :tiger_g3
     cellar :any
   end
 
