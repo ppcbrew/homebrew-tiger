@@ -88,19 +88,19 @@ class Gcc8 < Formula
     languages << "jit" if build.with? "jit"
 
     args = %W[
-      --build=#{arch}-apple-darwin#{osmajor},
-      --prefix=#{prefix},
-      --libdir=#{lib}/gcc/#{version_suffix},
-      --enable-checking=release,
-      --enable-languages=#{languages.join(",")},
-      --program-suffix=-#{version_suffix},
-      --with-gmp=#{Formula["gmp"].opt_prefix},
-      --with-mpfr=#{Formula["mpfr"].opt_prefix},
-      --with-mpc=#{Formula["libmpc"].opt_prefix},
-      --with-isl=#{Formula["isl"].opt_prefix},
-      --with-system-zlib,
-      --with-pkgversion=#{pkgversion},
-      --with-bugurl=https://github.com/mistydemeo/tigerbrew/issues,
+      --build=#{arch}-apple-darwin#{osmajor}
+      --prefix=#{prefix}
+      --libdir=#{lib}/gcc/#{version_suffix}
+      --enable-checking=release
+      --enable-languages=#{languages.join(",")}
+      --program-suffix=-#{version_suffix}
+      --with-gmp=#{Formula["gmp"].opt_prefix}
+      --with-mpfr=#{Formula["mpfr"].opt_prefix}
+      --with-mpc=#{Formula["libmpc"].opt_prefix}
+      --with-isl=#{Formula["isl"].opt_prefix}
+      --with-system-zlib
+      --with-pkgversion=#{pkgversion}
+      --with-bugurl=https://github.com/mistydemeo/tigerbrew/issues
     ]
 
     if build.without?("multilib") || !MacOS.prefer_64_bit?
