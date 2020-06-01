@@ -78,10 +78,27 @@ upload-bottle-to-b2.py $bottle
 sha=$( sha256.rb $bottle )
 cd ${tap_path}/Formula
 git pull
+# backblaze sometimes returns a 503.  retry up to three times.
+set +e
 update-bottle-sha.py $formula $sha
+if test $? -ne 0; then
+    sleep 10
+    update-bottle-sha.py $formula $sha
+    if test $? -ne 0; then
+        sleep 60
+        update-bottle-sha.py $formula $sha
+        if test $? -ne 0; then
+            sleep 300
+            set -e
+            update-bottle-sha.py $formula $sha
+        fi
+    fi
+fi
+set -e
 
 # commit and push the updated formula
 git add ${formula}.rb
+os_arch=$( echo $bottle | tr '.' ' ' | rev | awk '{ print $4 }' | rev )
 version=$( ppcbrew info $formula | grep stable | grep '(bottled)' | head -n1 | cut -d' ' -f3 )
 git commit -m "adding $os_arch bottle of $formula $version"
 git push origin
