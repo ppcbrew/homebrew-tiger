@@ -1,4 +1,4 @@
-class Gcc < Formula
+class Gcc7 < Formula
   revision 100
   def arch
     if Hardware::CPU.type == :intel
